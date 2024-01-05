@@ -64,7 +64,7 @@ public class PersonDao {
 			entityTransaction.begin();	
 			person.setId(id);
 //			person=id name address 
-			person.setAadharCard(dbPerson.getAadharCard());
+//			person.setAadharCard(dbPerson.getAadharCard());
 //			person=id name address aadharCard
 			entityManager.merge(person);
 			entityTransaction.commit();

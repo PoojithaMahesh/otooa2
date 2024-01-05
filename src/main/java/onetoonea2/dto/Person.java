@@ -1,5 +1,6 @@
 package onetoonea2.dto;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
@@ -13,16 +14,8 @@ public class Person {
 	private String name;
 	private String address;
 	
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private AadharCard aadharCard;
-	
-	
-
-	
-	
-	
-	
-	
 	
 	
 	public int getId() {
@@ -57,13 +50,13 @@ public class Person {
 		this.aadharCard = aadharCard;
 	}
 
-	@Override
-	public String toString() {
-		return "Person [id=" + id + ", name=" + name + ", address=" + address + ", aadharCard=" + aadharCard + "]";
-	}
-	
-	
-	
+//	@Override
+//	public String toString() {
+//		return "Person [id=" + id + ", name=" + name + ", address=" + address + ", aadharCard=" + aadharCard + "]";
+//	}
+//	
+//	
+//	
 	
 	
 	
